@@ -532,4 +532,3 @@ function textEditor(options) {
         });
     });
 }
-textEditor({selector: "#textEditor", form: "#formEditor"});
