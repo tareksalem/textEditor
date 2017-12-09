@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f4dd447-e399-49e0-af92-fa81f91bad24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/text.html" afterPath="$PROJECT_DIR$/text.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/textEditor.js" afterPath="$PROJECT_DIR$/textEditor.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,8 +20,8 @@
       <file leaf-file-name="textEditor.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/textEditor.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="554">
+              <caret line="534" column="59" lean-forward="false" selection-start-line="534" selection-start-column="59" selection-end-line="534" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -144,12 +144,12 @@
       <workItem from="1512561899545" duration="18761000" />
       <workItem from="1512678927168" duration="13124000" />
       <workItem from="1512764623264" duration="2285000" />
-      <workItem from="1512839684666" duration="16485000" />
+      <workItem from="1512839684666" duration="17986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73826000" />
+    <option name="totallyTimeSpent" value="75327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
@@ -330,8 +330,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/textEditor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="554">
+          <caret line="534" column="59" lean-forward="false" selection-start-line="534" selection-start-column="59" selection-end-line="534" selection-end-column="59" />
           <folding />
         </state>
       </provider>

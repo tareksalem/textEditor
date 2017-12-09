@@ -13,7 +13,7 @@ function textEditor(options) {
         //obgject contains the attributes of textarea
         const attributes = {
             class: textarea.className,
-            id: "editor"
+            id: textarea.id
         };
         const editor = document.createElement("iframe");
 
@@ -22,9 +22,7 @@ function textEditor(options) {
         for (var prop in attributes) {
             editor.setAttribute(prop, attributes[prop]);
         }
-
-        editor.style.border = "1px solid #cecece";
-        containerFrame.appendChild(editor);
+        textarea.style.border = "1px solid #cecece"; containerFrame.appendChild(editor);
         form.insertBefore(containerFrame, textarea);
         editor.contentDocument.designMode = "on";
         var editorTools = {
@@ -534,3 +532,4 @@ function textEditor(options) {
         });
     });
 }
+textEditor({selector: "#textEditor", form: "#formEditor"});
