@@ -17,12 +17,11 @@ function textEditor(options) {
         };
         const editor = document.createElement("iframe");
 
-
-
         for (var prop in attributes) {
             editor.setAttribute(prop, attributes[prop]);
         }
-        textarea.style.border = "1px solid #cecece"; containerFrame.appendChild(editor);
+        editor.style.border = "1px solid #cecece";
+        containerFrame.appendChild(editor);
         form.insertBefore(containerFrame, textarea);
         editor.contentDocument.designMode = "on";
         var editorTools = {
