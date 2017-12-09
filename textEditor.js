@@ -524,4 +524,3 @@ function textEditor(options) {
         textarea.value = editor.contentDocument.body.innerHTML;
     });
 }
-textEditor({selector: "#torok", form: "#formEditor"});
