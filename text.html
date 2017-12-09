@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #editor{
+            width:60%;
+            height:500px;
+            display: block;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <form id="formEditor">
+        <textarea id="editor">
+
+        </textarea>
+    </form>
+    <script src="textEditor.js"></script>
+    <script type="text/javascript">
+        textEditor({selector: "#editor", form: "#formEditor"});
+    </script>
+</body>
+</html>
