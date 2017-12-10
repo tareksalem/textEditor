@@ -9,6 +9,7 @@ function textEditor(options) {
         const textarea = document.querySelector(options.selector);
         const form = document.querySelector(options.form);
         const containerFrame = document.createElement("div");
+        var container = document.createElement("div");
         textarea.style.display = "none";
         //obgject contains the attributes of textarea
         const attributes = {
@@ -18,10 +19,12 @@ function textEditor(options) {
         const editor = document.createElement("iframe");
 
         for (var prop in attributes) {
-            editor.setAttribute(prop, attributes[prop]);
+            containerFrame.setAttribute(prop, attributes[prop]);
         }
-        editor.style.border = "1px solid #cecece";
+        editor.style.cssText = "border:1px solid #cecece;background-color:white;width:99.8%;";
         containerFrame.appendChild(editor);
+        containerFrame.style.height = "auto";
+        editor.style.height = "500px";
         form.insertBefore(containerFrame, textarea);
         editor.contentDocument.designMode = "on";
         var editorTools = {
@@ -37,7 +40,7 @@ function textEditor(options) {
                         editor.contentDocument.execCommand(command, false, null);
                     })
                 }
-
+                
             },
             italic: {
                 element: document.createElement("i"),
@@ -486,7 +489,7 @@ function textEditor(options) {
                 editorTools.backgroundColor.element.value = editorTools.backgroundColor.input.value;
             });
             editorTools[element].element.setAttribute("data-command", editorTools[element].data);
-            editorTools[element].element.style.cssText = "padding:8px;background-color:white;margin:5px;border:1px solid #cecece;cursor:pointer;border-radius: 5px;font-size:13px;";
+            editorTools[element].element.style.cssText = "padding:4px;background-color:white;margin:5px;border:1px solid #cecece;cursor:pointer;border-radius: 5px;font-size:12px;";
             editorTools.color.element.style.display = "inline-block";
             editorTools.backgroundColor.element.style.display = "inline-block";
             editorTools[element].element.style.cssText += editorTools[element].style;
@@ -508,23 +511,18 @@ function textEditor(options) {
             editorTools[element].func()
         }
 
-        var container = document.createElement("div");
-        container.style.cssText = "border:1px solid #cecece;margin-bottom:10px;background-color:#f3f3f3;"
+
+        container.style.cssText += "border:1px solid #cecece;margin-bottom:0px;background-color:rgb(92, 176, 243);height:auto;padding:10px"
         container.style.width = editor.clientWidth;
         var arr = [];
         for (var element in editorTools) {
             arr.push(editorTools[element].element);
         }
-        for (var i = 0; i < arr.length; i += 2) {
-            var containerIcons = document.createElement("div");
-            var slices =  arr.slice(i, i + 2);
-            for (var x = 0; x < slices.length; x++) {
-                containerIcons.append(slices[x]);
-            }
-            containerIcons.style.cssText = "padding:0px 5px 1px 5px;border-right:1px solid #cecece;display:inline-block;border-bottom:1px solid #cecece;overflow:hidden;";
-            container.appendChild(containerIcons);
-        }
+        for (var i = 0; i < arr.length; i++) {
+            arr[i].style.boxShadow = "0px 1px 1px 0px"
+            container.appendChild(arr[i]);
 
+        }
         containerFrame.insertBefore(container, editor);
         form.addEventListener("submit", function () {
             textarea.value = editor.contentDocument.body.innerHTML;
